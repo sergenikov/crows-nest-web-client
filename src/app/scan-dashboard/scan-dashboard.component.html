@@ -1,0 +1,7 @@
+<p>Nmap Scan Dashboard</p>
+
+<div>
+  <div *ngFor="let scan of scans" class="scan-results">
+    <app-scan-result [scan]="scan"></app-scan-result>
+  </div>
+</div>
