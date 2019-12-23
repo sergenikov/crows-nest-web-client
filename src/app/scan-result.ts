@@ -1,7 +1,9 @@
 export class ScanResult {
+  id: number;
   details: string;
 
-  constructor(details: string) {
+  constructor(id: number, details: string) {
+    this.id = id;
     this.details = details;
   }
 

@@ -7,7 +7,10 @@ import { ScanDashboardComponent } from "./scan-dashboard/scan-dashboard.componen
 import { ScanResultComponent } from "./scan-result/scan-result.component";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from "./app-routing.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+import { MatTabsModule } from "@angular/material/tabs";
 
 @NgModule({
   declarations: [AppComponent, ScanDashboardComponent, ScanResultComponent],
@@ -17,7 +20,9 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

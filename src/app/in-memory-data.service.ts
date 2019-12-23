@@ -8,6 +8,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const scans = [
       {
+        id: 1,
         details: `
       Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-22 21:24 PST
       Nmap scan report for 192.168.0.1
@@ -24,6 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
       `
       },
       {
+        id: 2,
         details: `
       Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-22 21:25 PST
       Nmap scan report for 192.168.0.4

@@ -1,7 +1,7 @@
-<p>Nmap Scan Dashboard</p>
+<h1>Scan Dashboard</h1>
 
-<div>
-  <div *ngFor="let scan of scans" class="scan-results">
+<mat-tab-group dynamicHeight>
+  <mat-tab *ngFor="let scan of scans" label="scan info {{ scan.id }}">
     <app-scan-result [scan]="scan"></app-scan-result>
-  </div>
-</div>
+  </mat-tab>
+</mat-tab-group>
