@@ -8,9 +8,8 @@ import { ScanResultComponent } from "./scan-result/scan-result.component";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { AppRoutingModule } from "./app-routing.module";
+import { MaterialImportsModule } from "./material-imports.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
-import { MatTabsModule } from "@angular/material/tabs";
 
 @NgModule({
   declarations: [AppComponent, ScanDashboardComponent, ScanResultComponent],
@@ -22,7 +21,7 @@ import { MatTabsModule } from "@angular/material/tabs";
     }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MaterialImportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
