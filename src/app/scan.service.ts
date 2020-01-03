@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { tap, catchError } from "rxjs/operators";
+import { ScanRequestDto } from "./scan-request.dto";
 
 @Injectable({
   providedIn: "root"
@@ -21,6 +22,19 @@ export class ScanService {
     return this.http.get<ScanResult[]>(this.scanUrl).pipe(
       tap(_ => console.log(`ScanService: got scan results: ${_}`)),
       catchError(this.handleError<ScanResult[]>("failed to get scan info", []))
+    );
+  }
+
+  /**
+   * Scan a single host
+   * @param ip - string ip to scan. Can be either ip or hostname.
+   */
+  scanHost(ip: string): Observable<ScanResult> {
+    const scanRequestDto: ScanRequestDto = { ip };
+    console.log(`ScanService: scanning ${scanRequestDto}`);
+    return this.http.post<ScanResult>(this.scanUrl, scanRequestDto).pipe(
+      tap(_ => console.log(`ScanService: got scan result: ${_}`)),
+      catchError(this.handleError<ScanResult>("failed to get scan info"))
     );
   }
 

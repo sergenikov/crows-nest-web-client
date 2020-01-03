@@ -9,11 +9,24 @@ import { ScanService } from "../scan.service";
 })
 export class ScanResultHolderComponent implements OnInit {
   scans: ScanResult[];
+  scan: ScanResult;
 
   constructor(private scanService: ScanService) {}
 
   ngOnInit() {
     this.getScans();
+    this.scanHost("192.168.1.23");
+  }
+
+  /**
+   * Scan a single host and return scan result
+   * @param host to scan
+   */
+  scanHost(host: string): void {
+    this.scanService.scanHost(host).subscribe(scan => {
+      console.log(`scan host result ${scan}`);
+      this.scan = scan;
+    });
   }
 
   /**
