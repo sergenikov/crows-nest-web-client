@@ -1,0 +1,32 @@
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="start center"
+  fxLayout.lt-lg="column"
+  fxLayoutGap="16px"
+  class="align"
+>
+  <div class="cards-container" *ngFor="let scan of scans">
+    <div class="card-container">
+      <mat-card fxFlex="0 1 calc(33% - 16px)">
+        <mat-card-header>
+          <mat-card-title>
+            <form class="ip-input-form">
+              <mat-form-field class="ip-input-field">
+                <input
+                  matInput
+                  value="192.168.1.2"
+                  placeholder="Enter IP to scan"
+                  type="IP"
+                />
+              </mat-form-field>
+              <button mat-raised-button>Scan</button>
+            </form>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <pre>{{ scan.details }}</pre>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

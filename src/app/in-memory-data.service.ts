@@ -48,6 +48,21 @@ export class InMemoryDataService implements InMemoryDbService {
 
       Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds
       `
+      },
+      {
+        id: 4,
+        details: `
+      Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-22 21:24 PST
+      Nmap scan report for 192.168.0.1
+      Host is up (0.0032s latency).
+      Not shown: 996 closed ports
+      PORT     STATE    SERVICE
+      22/tcp   filtered ssh
+      8080/tcp open     http-proxy
+      MAC Address: 1C:1B:68:97:09:CD (Arris Group)
+
+      Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds
+      `
       }
     ];
 

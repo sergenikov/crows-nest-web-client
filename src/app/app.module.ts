@@ -10,9 +10,16 @@ import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { AppRoutingModule } from "./app-routing.module";
 import { MaterialImportsModule } from "./material-imports.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ScanResultHolderComponent } from "./scan-result-holder/scan-result-holder.component";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
-  declarations: [AppComponent, ScanDashboardComponent, ScanResultComponent],
+  declarations: [
+    AppComponent,
+    ScanDashboardComponent,
+    ScanResultComponent,
+    ScanResultHolderComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -21,7 +28,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
