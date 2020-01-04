@@ -1,4 +1,4 @@
-import { ScanDashboardComponent } from "./scan-dashboard/scan-dashboard.component";
+import { ScanDashboardComponent } from "./dashboard/scan-dashboard/scan-dashboard.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 

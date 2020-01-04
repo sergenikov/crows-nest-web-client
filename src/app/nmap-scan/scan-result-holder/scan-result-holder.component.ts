@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { ScanResult } from "../scan-result";
-import { ScanService } from "../scan.service";
+import { ScanResult } from "../../scan-result";
+import { ScanService } from "../../scan.service";
 
 @Component({
   selector: "app-scan-result-holder",

@@ -1,13 +1,12 @@
 <div
   fxLayout="row wrap"
-  fxLayoutAlign="start center"
   fxLayout.lt-lg="column"
   fxLayoutGap="16px"
   class="align"
 >
   <div class="cards-container" *ngFor="let scan of scans">
-    <div class="card-container">
-      <mat-card fxFlex="0 1 calc(33% - 16px)">
+    <div class="card-container" fxFlex="0 1 calc(33% - 16px)">
+      <mat-card>
         <mat-card-header>
           <mat-card-title>
             <div>
