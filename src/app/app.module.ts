@@ -7,7 +7,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DashboardModule } from "./dashboard/dashboard.module";
-import { ApiClientModule } from './api-client/api-client.module';
+import { ApiClientModule } from "./api-client/api-client.module";
 
 @NgModule({
   declarations: [AppComponent],

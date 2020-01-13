@@ -1,0 +1,19 @@
+<form [formGroup]="scanForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="ip-input-field">
+    <input
+      matInput
+      type="text"
+      formControlName="host"
+      placeholder="Enter hostname"
+    />
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    type="submit"
+    [disabled]="!scanForm.valid"
+    (click)="scan()"
+  >
+    Scan
+  </button>
+</form>

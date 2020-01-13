@@ -4,29 +4,39 @@
   fxLayoutGap="16px"
   class="align"
 >
-  <div class="cards-container" *ngFor="let scan of scans">
+  <div class="cards-container">
     <div class="card-container" fxFlex="0 1 calc(33% - 16px)">
       <mat-card>
         <mat-card-header>
           <mat-card-title>
             <div>
-              <form class="ip-input-form">
+              <form [formGroup]="scanForm" (ngSubmit)="onSubmit()">
                 <mat-form-field class="ip-input-field">
                   <input
                     matInput
-                    value="192.168.1.2"
-                    placeholder="Enter IP to scan"
-                    type="IP"
+                    type="text"
+                    formControlName="host"
+                    placeholder="Enter hostname"
                   />
                 </mat-form-field>
-                <button mat-raised-button>Scan</button>
+
+                <button
+                  mat-raised-button
+                  type="submit"
+                  [disabled]="!scanForm.valid"
+                >
+                  Scan
+                </button>
               </form>
             </div>
           </mat-card-title>
         </mat-card-header>
         <mat-card-content>
           <div>
-            <app-scan-result [scan]="scan"></app-scan-result>
+            <app-scan-result
+              *ngIf="scanResult"
+              [scan]="scanResult"
+            ></app-scan-result>
           </div>
         </mat-card-content>
       </mat-card>

@@ -11,7 +11,7 @@ import { handleError } from "../handle-error.fn";
   providedIn: "root"
 })
 export class BasicHTTPScannerService implements ScannerApi {
-  private api: string = "http://localhost:8080/api/v1/scan";
+  private api: string = "http://localhost:8080/api/v1/asyncscan";
   private apiScans: string = "http://localhost:8080/api/v1/scans";
 
   constructor(private http: HttpClient) {}
