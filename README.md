@@ -1,4 +1,11 @@
-# NmapWebView
+# Overview
+This is my first ever Angular app and first stab and contemporary web client development.
+
+# Requirements
+- Node 13
+- API: [Crows Nest API](https://github.com/sergenikov/crows-nest-api).
+
+# Crows Nest Angular Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
